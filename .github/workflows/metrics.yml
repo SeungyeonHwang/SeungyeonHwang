@@ -1,0 +1,24 @@
+name: Generate GitHub metrics
+on:
+  schedule:
+    - cron: "0 18 * * *"     # 매일 03:00 KST (UTC 18:00)
+  workflow_dispatch:
+
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user:  ${{ github.repository_owner }}   # 내 아이디 자동 입력
+          template: classic                       # 레이아웃
+          base: header, activity, community, repositories, metadata
+
+          # ------- 플러그인 예시 -------
+          plugin_languages: yes          # 최근/전체 언어 비율
+          plugin_habits: yes             # 요일·시간대 커밋 습관
+          plugin_habits_charts: yes
+          plugin_achievements: yes       # 스타·이슈 등 뱃지
+          plugin_achievements_threshold: C
+          # (원하면 AniList·LeetCode 등 추가 가능)
