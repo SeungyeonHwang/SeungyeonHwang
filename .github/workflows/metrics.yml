@@ -31,7 +31,6 @@ jobs:
           plugin_languages_indepth: yes
           plugin_habits: yes
           plugin_isocalendar: yes
-          plugin_activity: yes
           plugin_repositories: yes
           plugin_topics: yes
           optimize: css               # SVG 용량 최적화  [oai_citation:10‡GitHub](https://github.com/lowlighter/metrics/discussions/1570?utm_source=chatgpt.com)
