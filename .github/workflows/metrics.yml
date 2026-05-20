@@ -27,10 +27,15 @@ jobs:
           commits_authoring: syhwang.web@gmail.com, SeungyeonHwang
           # --- 핵심 플러그인 ---
           plugin_languages: yes
-          plugin_languages_sections: recently-used, most-used
+          plugin_languages_sections: most-used
           plugin_languages_indepth: yes
-          plugin_habits: yes
+          plugin_habits: no                      # 최근 활동 의존 + 업스트림 버그로 비활성화
           plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year # 잔디 달력 1년치
           plugin_repositories: yes
           plugin_topics: yes
-          optimize: css               # SVG 용량 최적화  [oai_citation:10‡GitHub](https://github.com/lowlighter/metrics/discussions/1570?utm_source=chatgpt.com)
+          plugin_achievements: yes               # GitHub 업적 배지
+          plugin_achievements_threshold: C
+          plugin_lines: yes                      # 추가/삭제 코드 라인 수
+          plugin_notable: yes                    # 유명 레포 기여 이력
+          optimize: css               # SVG 용량 최적화
