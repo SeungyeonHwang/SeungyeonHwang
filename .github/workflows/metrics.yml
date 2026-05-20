@@ -34,8 +34,6 @@ jobs:
           plugin_isocalendar_duration: full-year # 잔디 달력 1년치
           plugin_repositories: yes
           plugin_topics: yes
-          plugin_achievements: yes               # GitHub 업적 배지
-          plugin_achievements_threshold: C
           plugin_lines: yes                      # 추가/삭제 코드 라인 수
-          plugin_notable: yes                    # 유명 레포 기여 이력
+          plugin_followup: yes                   # 이슈/PR 처리 현황
           optimize: css               # SVG 용량 최적화
