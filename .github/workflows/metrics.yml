@@ -3,8 +3,7 @@ on:
   schedule:
     - cron: '0 18 * * *'          # 매일 03:00 JST
   workflow_dispatch:
-  push:
-    branches: [main]
+  # push 트리거 제거: 커밋마다 실행 폭주 → GraphQL 부분 결손(0,0) 유발. cron + 수동만 사용
 
 permissions:
   contents: write                 # SVG 커밋 허용
